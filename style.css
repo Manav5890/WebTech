@@ -1,0 +1,11 @@
+.cards{
+    border: 1px solid lightgrey;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px lightgrey;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 2500px;
+  display: inline-block;
+
+}
