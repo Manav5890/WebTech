@@ -1,70 +1,33 @@
-// function changeText(){
-//     let fpara = document.querySelector("#fpara")
-//     fpara.textContent = "Hello Manav"
-// }
-
-// let fpara = document.querySelector("#fpara")
-// fpara.addEventListener('click', changeText)
-
-// let anchorElement = document.getElementById("fanchor")
-
-// anchorElement.addEventListener('click', function(event){
-//     event.preventDefault();
-//     anchorElement.textContent = "click kar bhai"
-// })
-
-// function alertPara(event){
-//     if(event.target.nodeName === 'P'){
-//         alert("You have clicked on para " + event.target.textContent)
+// let section= document.querySelector("section")
+// let count = 0;
+// let handle =  ()=>{
+//     if(count%2 ==0){
+//     section.style.backgroundColor = "red";
+//     section.style.borderRadius = "50%";
+//     count ++;
+//     }else{
+//      section.style.backgroundColor = "white";
+//     section.style.borderRadius = "0";
+//     count ++;
 //     }
     
-// }
+// };
 
+let button = document.querySelector("button")
+let section = document.querySelector("section")
 
-// let myDiv = document.getElementById("wrapper")
-
-// document.addEventListener('click', alertPara)
-
-//code 1
-// const t1 = performance.now()
-// for(let i = 1; i<=100; i++){
-//     let para = document.createElement('p')
-//     para.textContent = "this is para" + i;
-//     document.body.appendChild(para);
-// }
-
-// const t2 = performance.now()
-
-// console.log("total time taken by code 1" + (t2-t1))
-
-
-// code2
-// let myDiv = document.createElement('div')
-// const t1 = performance.now()
-// for(let i = 1; i<=100; i++){
-//     let para = document.createElement('p')
-//     para.textContent = "this is para" + i;
-//     myDiv.appendChild(para)
-// }
-// document.body.appendChild(myDiv)
-// const t2 = performance.now()
-
-// console.log("total time taken by code 1" + (t2-t1))
-
-// code 3 by document fragment
-
-// let fragment = document.createDocumentFragment()
-
-// for(let i = 1; i<=100; i++){
-//     let para = document.createElement('p')
-//     para.textContent = 'this is para' + i
-//     fragment.appendChild(para)
-// }
-
-console.log("hi")
-
-setTimeout(function timeout(){
-    console.log("hi my name is manav")
-}, 5000)
-
-console.log("end")
+button.addEventListener("click", ()=>{
+    if(button.innerText=='Login'){
+        button.style.color = 'white'
+        button.style.backgroundColor = "red"
+        button.innerText="Logout"
+        section.innerText ="User is Logout"
+        console.log("You are logout")
+    }else{
+        button.style.color = 'white'
+        button.style.backgroundColor = "green"
+        button.innerText = "Login"
+        section.innerText ="User is Login"
+        console.log("You are login")
+    }
+})
